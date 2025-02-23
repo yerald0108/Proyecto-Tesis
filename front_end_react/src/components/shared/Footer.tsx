@@ -9,7 +9,7 @@ export const Footer = () => {
 
         <div className="flex flex-col items-center">
             <Link to='/'>
-                <img src="/footer/logo_home.png" className='h-12'/>
+                <img src="/images/logo_home.png" className='h-12'/>
             </Link>
 
             <p className="font-semibold text-lg uppercase tracking-tighter text-gray-900 text-center">
@@ -94,7 +94,7 @@ export const Footer = () => {
                             target="_blank"
                             rel="noreferrer"
                             className="text-slate-900 border border-gray-600 w-full h-full py-3.5 flex items-center justify-center
-                            transition-all hover:bg-white hover:text-gray-950"
+                            transition-all hover:bg-amber-950 hover:text-gray-950"
                         >
                             {link.icon}
                         </a>

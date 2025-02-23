@@ -7,7 +7,7 @@ import { Logo } from "./Logo";
 
 export const Navbar = () => {
   return (
-    <div>
+    <div className="fixed top-0 left-0 w-full z-50">
         <header className="bg-white text-black py-4 flex items-center justify-between px-5 border-b border-slate-200 lg:px-12">
             <Logo />
             <nav className="space-x-5 hidden md:flex">
@@ -40,18 +40,18 @@ export const Navbar = () => {
                     </Link>
                 </div>
 
-                <div className="relative">
+                <button className="relative">
                     <span className="absolute -bottom-2 -right-2 w-5 h-5 grid place-items-center bg-black text-white text-xs rounded-full">
                         0
                     </span>
                     <HiOutlineBell size={30} />
-                </div>
+                </button>
             </div>
 
             <button className="md:hidden">
                 <FaBarsStaggered size={25} />
             </button>
-        </header>;
+        </header>
     </div>
   );
 };
