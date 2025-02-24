@@ -3,9 +3,14 @@ import { navbarLinks } from "../../constants/links";
 import { HiOutlineBell, HiOutlineSearch } from "react-icons/hi";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { Logo } from "./Logo";
+import { useGlobalStore } from "../../store/global.store";
 
 
 export const Navbar = () => {
+
+    const openSheet = useGlobalStore(state => state.openSheet);
+    const setActiveNavMobile = useGlobalStore(state => state.setActiveNavMobile);
+
   return (
     <div className="fixed top-0 left-0 w-full z-50">
         <header className="bg-white text-black py-4 flex items-center justify-between px-5 border-b border-slate-200 lg:px-12">
@@ -27,7 +32,7 @@ export const Navbar = () => {
             </nav>
 
             <div className="flex gap-5 items-center">
-                <button>
+                <button onClick={() => openSheet('search')}>
                     <HiOutlineSearch size={25} />
                 </button>
 
@@ -48,7 +53,7 @@ export const Navbar = () => {
                 </button>
             </div>
 
-            <button className="md:hidden">
+            <button className="md:hidden" onClick={() => setActiveNavMobile(true)}>
                 <FaBarsStaggered size={25} />
             </button>
         </header>

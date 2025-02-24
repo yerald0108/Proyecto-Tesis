@@ -14,20 +14,20 @@ export const FeatureGrid = () => {
 
   return (
     <div className="flex flex-col gap-5 mt-1 -mb-10">
-      <div className="flex justify-center gap-10">
-        {features.slice(0, 7).map((feature, index) => (
-          <a key={index} href={feature.link}  target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
-            <img src={feature.img} className="h-20 w-20 object-contain transition-transform duration-300 ease-in-out transform hover:scale-110 cursor-pointer" />
-          </a>
-        ))}
-      </div>
-      <div className="flex justify-center gap-20">
-        {features.slice(7).map((feature, index) => (
-          <a key={index} href={feature.link}  target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
-            <img src={feature.img} className="h-20 w-20 object-contain transition-transform duration-300 ease-in-out transform hover:scale-110 cursor-pointer" />
-          </a>
-        ))}
-      </div>
-    </div>
+  <div className="flex flex-wrap justify-center gap-10">
+    {features.slice(0, 7).map((feature, index) => (
+      <a key={index} href={feature.link} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+        <img src={feature.img} className="h-20 w-20 object-contain transition-transform duration-300 ease-in-out transform hover:scale-110 cursor-pointer" />
+      </a>
+    ))}
+  </div>
+  <div className="flex flex-wrap justify-center gap-10">
+    {features.slice(7).map((feature, index) => (
+      <a key={index} href={feature.link} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+        <img src={feature.img} className="h-20 w-20 object-contain transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer" />
+      </a>
+    ))}
+  </div>
+</div>
   );
 };
